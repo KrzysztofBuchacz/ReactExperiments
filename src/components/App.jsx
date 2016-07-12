@@ -1,14 +1,21 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+    console.log('App ctor!');
     this.state = {
-      mytext: 'aaaaaggGGG'
+      title: 'React experiments'
     }
   }
   render() {
+    console.log('App render!');
+    var squares = [<Square />, <Square />, <Square />];
     return (
       // In React, the attribute is className, not class
-      <div className="alert alert-success">{this.state.mytext}</div>
+      <div>
+        <div className="alert alert-success">{this.state.title}  {squares}
+        </div>
+        <div><Hello /></div>
+      </div>
     )
   }
 }
